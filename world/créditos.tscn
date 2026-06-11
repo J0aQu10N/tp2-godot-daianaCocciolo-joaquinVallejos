@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://k0ba4h4sd0eu"]
+
+[ext_resource type="Texture2D" uid="uid://cbcucqcjacpge" path="res://entorno/BG.png" id="1_fruri"]
+[ext_resource type="Script" uid="uid://4geipgb3p1q2" path="res://Menú Principal/créditos.gd" id="1_pkycg"]
+
+[node name="Créditos" type="Control" unique_id=894518319]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1220.0
+offset_bottom = 831.0
+script = ExtResource("1_pkycg")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1633696724]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.92827606, 0.8326494)
+texture = ExtResource("1_fruri")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=313941823]
+layout_mode = 0
+offset_right = 1168.0
+offset_bottom = 815.0
+theme_override_constants/separation = 70
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=51238894]
+self_modulate = Color(0.024483718, 0.035666782, 4.512258e-09, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "CRÉDITOS"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=1437343216]
+modulate = Color(0.035382573, 0.044820555, 3.008172e-09, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "CIARES JOSE MANUEL
+COCCIOLO DAIANA GISELLE
+VALLEJOS JOAQUIN"
+horizontal_alignment = 1
+
+[node name="Atrás" type="Button" parent="VBoxContainer" unique_id=1179713831]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 28
+text = "VOLVER"
+
+[connection signal="pressed" from="VBoxContainer/Atrás" to="." method="_on_atrás_pressed"]
