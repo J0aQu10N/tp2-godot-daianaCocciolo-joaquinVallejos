@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Equipo2_Vallejos_Cocciolo_Ciares"
-run/main_scene="uid://b56cmhwbh6o3w"
+run/main_scene="uid://h0w0mh1q6srv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
