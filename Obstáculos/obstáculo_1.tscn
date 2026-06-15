@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://hhxcrqhjtmlm"]
+
+[ext_resource type="Texture2D" uid="uid://dhgey2mqd65gk" path="res://entorno/Objects/Bush (2).png" id="1_r8621"]
+[ext_resource type="Script" uid="uid://brlfpohg2y3gn" path="res://Obstáculos/obstáculo_1.gd" id="1_xw8ro"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xw8ro"]
+
+[node name="Obstáculo1" type="Area2D" unique_id=18073962]
+script = ExtResource("1_xw8ro")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=430957397]
+texture = ExtResource("1_r8621")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=593624518]
+position = Vector2(-1, 0)
+scale = Vector2(6.5564837, 3.4165435)
+shape = SubResource("CircleShape2D_xw8ro")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

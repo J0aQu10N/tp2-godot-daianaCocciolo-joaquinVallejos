@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://dac5r4uty20l8"]
 
 [ext_resource type="Texture2D" uid="uid://cslodt1f3ijto" path="res://icon.svg" id="1_wv3cm"]
+[ext_resource type="Script" uid="uid://d3rahu6g613nw" path="res://entorno/piso.gd" id="2_4ny6w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ny6w"]
 size = Vector2(128.09131, 130.25827)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nex72"]
+size = Vector2(20.520855, 36.676495)
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=711872060]
 scale = Vector2(9.062135, -0.3216524)
@@ -16,3 +20,13 @@ texture = ExtResource("1_wv3cm")
 position = Vector2(-0.04308319, 0)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_4ny6w")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=685466372]
+script = ExtResource("2_4ny6w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1164410755]
+position = Vector2(0.055172056, 1.5544746)
+scale = Vector2(6.253943, -3.9840364)
+shape = SubResource("RectangleShape2D_nex72")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

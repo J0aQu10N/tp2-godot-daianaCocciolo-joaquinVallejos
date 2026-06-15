@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bcc82j1veydmi"]
+
+[ext_resource type="Script" uid="uid://dge5oh6wc80hc" path="res://Pantalla de derrota/pantalla_de_derrota.gd" id="1_4fhll"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dgk0d"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Pantalla de derrota" type="Control" unique_id=81794613]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1156.0
+offset_bottom = 656.0
+script = ExtResource("1_4fhll")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2118942654]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 642.0
+color = Color(0.080783345, 0.080783345, 0.080783345, 1)
+
+[node name="Label" type="Label" parent="." unique_id=2053167777]
+layout_mode = 0
+offset_top = 108.0
+offset_right = 1156.0
+offset_bottom = 641.0
+theme_override_font_sizes/font_size = 60
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Volver a jugar" type="Button" parent="." unique_id=1130407168]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 286.0
+offset_right = 701.0
+offset_bottom = 333.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_dgk0d")
+text = "VOLVER A JUGAR"
+
+[node name="Menú Principal" type="Button" parent="." unique_id=691412675]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 371.0
+offset_right = 701.0
+offset_bottom = 418.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_dgk0d")
+text = "MENÚ PRINCIPAL"
+
+[connection signal="pressed" from="Volver a jugar" to="." method="_on_volver_a_jugar_pressed"]
+[connection signal="pressed" from="Menú Principal" to="." method="_on_menú_principal_pressed"]
