@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b8jed81by04dj"]
+
+[ext_resource type="Script" uid="uid://dkhh0j2owju3l" path="res://Obstáculos/ostáculo_cactus.gd" id="1_m8ksq"]
+[ext_resource type="Texture2D" uid="uid://c1o5ur5ljvrs4" path="res://entorno/Objects/Cactus (1).png" id="2_m8ksq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2p3n1"]
+radius = 22.841364
+
+[node name="OstáculoCactus" type="Area2D" unique_id=305316354]
+script = ExtResource("1_m8ksq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1131594561]
+texture = ExtResource("2_m8ksq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=503513178]
+scale = Vector2(2.3980584, 2.4431446)
+shape = SubResource("CircleShape2D_2p3n1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
