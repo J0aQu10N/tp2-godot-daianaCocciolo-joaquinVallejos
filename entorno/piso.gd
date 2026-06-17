@@ -12,6 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Player" or body is CharacterBody2D:
+	if body is CharacterBody2D:
 		get_tree().change_scene_to_file('res://world/pantalla_de_derrota.tscn')
 	pass # Replace with function body.

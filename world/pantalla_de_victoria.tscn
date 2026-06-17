@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://gmuom48ig6b3"]
+
+[ext_resource type="Script" uid="uid://ij7i1eqfe2wo" path="res://Pantalla de victoria/pantalla_de_victoria.gd" id="1_ngh56"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_odh1g"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngh56"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Pantalla de victoria" type="Control" unique_id=2012556453]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1160.0
+offset_bottom = 655.0
+script = ExtResource("1_ngh56")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1025632043]
+layout_mode = 0
+offset_right = 1163.0
+offset_bottom = 660.0
+color = Color(0.04755766, 0.047557645, 0.047557645, 1)
+
+[node name="Label" type="Label" parent="." unique_id=444633327]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 63.0
+offset_right = 1157.0
+offset_bottom = 716.0
+theme_override_font_sizes/font_size = 60
+text = "GANASTE"
+horizontal_alignment = 1
+
+[node name="Volver a jugar" type="Button" parent="." unique_id=1931100985]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 286.0
+offset_right = 701.0
+offset_bottom = 333.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_odh1g")
+text = "VOLVER A JUGAR"
+
+[node name="Menú Principal" type="Button" parent="." unique_id=770447246]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 371.0
+offset_right = 701.0
+offset_bottom = 418.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_ngh56")
+text = "MENÚ PRINCIPAL"
+
+[connection signal="pressed" from="Volver a jugar" to="." method="_on_volver_a_jugar_pressed"]
+[connection signal="pressed" from="Menú Principal" to="." method="_on_menú_principal_pressed"]

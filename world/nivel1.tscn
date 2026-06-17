@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://hhxcrqhjtmlm" path="res://Obstáculos/obstáculo_1.tscn" id="20_m0b6j"]
 [ext_resource type="PackedScene" uid="uid://b47367pdf3tog" path="res://Obstáculos/obstáculo_caja.tscn" id="21_4rq4f"]
 [ext_resource type="PackedScene" uid="uid://b8jed81by04dj" path="res://Obstáculos/ostáculo_cactus.tscn" id="22_4ui68"]
+[ext_resource type="PackedScene" uid="uid://dw2b6mj71wf0c" path="res://Obstáculos/cartel_victoria.tscn" id="23_ya2oj"]
+[ext_resource type="PackedScene" uid="uid://c2wxn3eaq47fs" path="res://Enemigo/enemigo.tscn" id="24_so7ln"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27v78"]
 texture = ExtResource("4_m0b6j")
@@ -1481,7 +1483,7 @@ sources/15 = SubResource("TileSetAtlasSource_to4t3")
 [node name="Node2D" type="Node2D" unique_id=875258201]
 
 [node name="CharacterBody2D" parent="." unique_id=1419484690 instance=ExtResource("1_qpnag")]
-position = Vector2(13427, 1055)
+position = Vector2(576, 566)
 
 [node name="StaticBody2D" parent="." unique_id=711872060 instance=ExtResource("2_ifhbl")]
 visible = false
@@ -1673,3 +1675,16 @@ position = Vector2(17277, -320)
 
 [node name="ObstáculoCaja27" parent="." unique_id=1622923508 instance=ExtResource("21_4rq4f")]
 position = Vector2(17178, -321)
+
+[node name="Cartel Victoria" parent="." unique_id=651005089 instance=ExtResource("23_ya2oj")]
+position = Vector2(17867, -412)
+
+[node name="Enemigo" parent="." unique_id=1756892659 node_paths=PackedStringArray("objetivo") instance=ExtResource("24_so7ln")]
+position = Vector2(3940, 552)
+objetivo = NodePath("../CharacterBody2D")
+
+[node name="Enemigo2" parent="." unique_id=218413302 instance=ExtResource("24_so7ln")]
+position = Vector2(9257, 1830)
+
+[node name="Enemigo3" parent="." unique_id=1157279793 instance=ExtResource("24_so7ln")]
+position = Vector2(15400, -107)

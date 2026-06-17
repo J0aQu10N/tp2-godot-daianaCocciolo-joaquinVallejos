@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dw2b6mj71wf0c"]
+
+[ext_resource type="Texture2D" uid="uid://cjjcg71t6074v" path="res://entorno/Objects/Sign.png" id="1_3qka7"]
+[ext_resource type="Script" uid="uid://xf5uyhh4w5up" path="res://Obstáculos/cartel_victoria.gd" id="1_ocucy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocucy"]
+size = Vector2(82, 88)
+
+[node name="Cartel Victoria" type="Area2D" unique_id=651005089]
+script = ExtResource("1_ocucy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1758018448]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_ocucy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1129843811]
+texture = ExtResource("1_3qka7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
