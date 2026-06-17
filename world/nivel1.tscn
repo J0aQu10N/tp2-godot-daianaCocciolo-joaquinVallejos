@@ -1683,8 +1683,10 @@ position = Vector2(17867, -412)
 position = Vector2(3940, 552)
 objetivo = NodePath("../CharacterBody2D")
 
-[node name="Enemigo2" parent="." unique_id=218413302 instance=ExtResource("24_so7ln")]
+[node name="Enemigo2" parent="." unique_id=218413302 node_paths=PackedStringArray("objetivo") instance=ExtResource("24_so7ln")]
 position = Vector2(9257, 1830)
+objetivo = NodePath("../CharacterBody2D")
 
-[node name="Enemigo3" parent="." unique_id=1157279793 instance=ExtResource("24_so7ln")]
+[node name="Enemigo3" parent="." unique_id=1157279793 node_paths=PackedStringArray("objetivo") instance=ExtResource("24_so7ln")]
 position = Vector2(15400, -107)
+objetivo = NodePath("../CharacterBody2D")
