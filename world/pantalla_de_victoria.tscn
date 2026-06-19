@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://gmuom48ig6b3"]
 
 [ext_resource type="Script" uid="uid://ij7i1eqfe2wo" path="res://Pantalla de victoria/pantalla_de_victoria.gd" id="1_ngh56"]
+[ext_resource type="AudioStream" uid="uid://cgurggql7ob6x" path="res://assets/Musica/win.mp3" id="2_odh1g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_odh1g"]
 bg_color = Color(1, 1, 1, 1)
@@ -52,6 +53,11 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_ngh56")
 text = "MENÚ PRINCIPAL"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1032834792]
+stream = ExtResource("2_odh1g")
+volume_db = -15.0
+autoplay = true
 
 [connection signal="pressed" from="Volver a jugar" to="." method="_on_volver_a_jugar_pressed"]
 [connection signal="pressed" from="Menú Principal" to="." method="_on_menú_principal_pressed"]

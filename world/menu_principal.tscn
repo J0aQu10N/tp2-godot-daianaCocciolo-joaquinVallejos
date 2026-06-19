@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cbcucqcjacpge" path="res://entorno/BG.png" id="1_6506i"]
 [ext_resource type="Script" uid="uid://cddho24ngavoh" path="res://Menú Principal/menu_principal.gd" id="1_g4s5x"]
+[ext_resource type="AudioStream" uid="uid://df1l1gipvbi8e" path="res://assets/Musica/mainmenumusic-loop.mp3" id="3_iomi7"]
 
 [node name="Menu Principal" type="Control" unique_id=1750188304]
 layout_mode = 3
@@ -28,7 +29,10 @@ theme_override_constants/separation = 50
 modulate = Color(0.08901606, 0.042654768, 0.033615857, 1)
 layout_mode = 2
 theme_override_font_sizes/font_size = 45
-text = "TÍTULO"
+text = "
+EL DESPERTAR 
+DE LA 
+SANGRE AUREA"
 horizontal_alignment = 1
 
 [node name="Jugar" type="Button" parent="VBoxContainer" unique_id=860726606]
@@ -48,6 +52,12 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 23
 text = "SALIR"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=780367579]
+stream = ExtResource("3_iomi7")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="VBoxContainer/Créditos" to="." method="_on_créditos_pressed"]

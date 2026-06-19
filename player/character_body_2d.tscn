@@ -4,6 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://d4l302ogidgff" path="res://assets/animaciones-player/player-idle-derecha.png" id="2_fui21"]
 [ext_resource type="Texture2D" uid="uid://dgq8r84jn7y17" path="res://assets/animaciones-player/player-saltar-derecha.png" id="3_ydsn6"]
 [ext_resource type="Texture2D" uid="uid://c5kf3025x0wh4" path="res://assets/animaciones-player/player-caminar-derecha.png" id="4_scca8"]
+[ext_resource type="AudioStream" uid="uid://b7v6htwd8uogn" path="res://assets/Musica/sfx/player-jump-sfx.mp3" id="5_5fe0u"]
+[ext_resource type="AudioStream" uid="uid://dmugx263jl6xb" path="res://assets/Musica/sfx/player-jump-alt-sfx.mp3" id="6_00gdi"]
+[ext_resource type="AudioStream" uid="uid://wtxxi1w857pt" path="res://assets/Musica/sfx/player-step-sfx.mp3" id="7_4eqd5"]
+[ext_resource type="AudioStream" uid="uid://b01kesgr860eu" path="res://assets/Musica/sfx/player-step-alt-sfx.mp3" id="8_dc2cb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ydsn6"]
 size = Vector2(23, 34)
@@ -81,15 +85,14 @@ tracks/2/path = NodePath("Sprite2D:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [3, 4, 5, 6]
+"values": [4]
 }
 
 [sub_resource type="Animation" id="Animation_00gdi"]
 resource_name = "caminar"
-length = 0.5
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -122,10 +125,27 @@ tracks/2/path = NodePath("Sprite2D:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.09535002, 0.19535002, 0.29535002, 0.39535, 0.49535003),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4, 1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"caminarSFX"
+}, {
+"args": [],
+"method": &"caminarSFX"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_ydsn6"]
@@ -171,7 +191,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_4eqd5"]
 resource_name = "saltar"
-length = 0.3
+length = 0.19999999999999998
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -203,10 +223,10 @@ tracks/2/path = NodePath("Sprite2D:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.10000001, 0.20000002),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [1, 2, 3]
+"values": [2, 3]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_scca8"]
@@ -217,6 +237,16 @@ _data = {
 &"idle": SubResource("Animation_ydsn6"),
 &"saltar": SubResource("Animation_4eqd5")
 }
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_m27dq"]
+streams_count = 2
+stream_0/stream = ExtResource("5_5fe0u")
+stream_1/stream = ExtResource("6_00gdi")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_g4v7s"]
+streams_count = 2
+stream_0/stream = ExtResource("7_4eqd5")
+stream_1/stream = ExtResource("8_dc2cb")
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1419484690]
 scale = Vector2(2.0454216, 1.8051893)
@@ -239,3 +269,13 @@ position_smoothing_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2034228778]
 libraries/ = SubResource("AnimationLibrary_scca8")
+
+[node name="SaltoSFX" type="AudioStreamPlayer2D" parent="." unique_id=227709755]
+stream = SubResource("AudioStreamRandomizer_m27dq")
+volume_db = -5.0
+pitch_scale = 1.1
+
+[node name="CaminarSFX" type="AudioStreamPlayer2D" parent="." unique_id=881564591]
+stream = SubResource("AudioStreamRandomizer_g4v7s")
+volume_db = -10.0
+pitch_scale = 1.1

@@ -1,9 +1,17 @@
 [gd_scene format=3 uid="uid://bcc82j1veydmi"]
 
 [ext_resource type="Script" uid="uid://dge5oh6wc80hc" path="res://Pantalla de derrota/pantalla_de_derrota.gd" id="1_4fhll"]
+[ext_resource type="AudioStream" uid="uid://c62ofycxa2n3v" path="res://assets/Musica/death.mp3" id="2_gsvhj"]
+[ext_resource type="AudioStream" uid="uid://cgog87xo2gccd" path="res://assets/Musica/total-fail.mp3" id="3_hnhir"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dgk0d"]
 bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_g4v7s"]
+streams_count = 2
+stream_0/stream = ExtResource("2_gsvhj")
+stream_0/weight = 2.0
+stream_1/stream = ExtResource("3_hnhir")
 
 [node name="Pantalla de derrota" type="Control" unique_id=81794613]
 layout_mode = 3
@@ -48,6 +56,11 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_dgk0d")
 text = "MENÚ PRINCIPAL"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=4869196]
+stream = SubResource("AudioStreamRandomizer_g4v7s")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="Volver a jugar" to="." method="_on_volver_a_jugar_pressed"]
 [connection signal="pressed" from="Menú Principal" to="." method="_on_menú_principal_pressed"]

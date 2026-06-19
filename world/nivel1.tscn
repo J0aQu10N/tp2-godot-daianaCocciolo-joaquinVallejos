@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://dw2b6mj71wf0c" path="res://Obstáculos/cartel_victoria.tscn" id="23_ya2oj"]
 [ext_resource type="PackedScene" uid="uid://c2wxn3eaq47fs" path="res://Enemigo/enemigo.tscn" id="24_so7ln"]
 [ext_resource type="PackedScene" uid="uid://diuihgh3dhhuf" path="res://Gema/gema.tscn" id="26_4ofmf"]
+[ext_resource type="AudioStream" uid="uid://cauwb8xqk7rot" path="res://assets/Musica/level1-loop.mp3" id="27_74xyr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27v78"]
 texture = ExtResource("4_m0b6j")
@@ -1929,3 +1930,10 @@ position = Vector2(17299, -447)
 
 [node name="Gema75" parent="." unique_id=2012865313 instance=ExtResource("26_4ofmf")]
 position = Vector2(17629, -422)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=814438657]
+stream = ExtResource("27_74xyr")
+volume_db = -20.0
+pitch_scale = 1.1
+autoplay = true
+parameters/looping = true
