@@ -5,16 +5,19 @@
 [ext_resource type="Script" uid="uid://iklts5fykrun" path="res://Enemigo/area_2d.gd" id="3_dy474"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsjwo"]
-size = Vector2(128, 119)
+size = Vector2(123, 123)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6k1e"]
-size = Vector2(127, 127)
+size = Vector2(128.5, 103)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fodb4"]
+size = Vector2(119, 24)
 
 [node name="Enemigo" type="CharacterBody2D" unique_id=1756892659]
 script = ExtResource("1_k6k1e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=597166867]
-position = Vector2(1, -0.5)
+position = Vector2(-0.5, -2.5)
 shape = SubResource("RectangleShape2D_wsjwo")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=930454436]
@@ -25,7 +28,14 @@ texture = ExtResource("2_dy474")
 script = ExtResource("3_dy474")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=105456345]
-position = Vector2(0, 0.5)
+position = Vector2(-0.25, 13)
 shape = SubResource("RectangleShape2D_k6k1e")
 
+[node name="Perder" type="Area2D" parent="." unique_id=1279214804]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perder" unique_id=2070487422]
+position = Vector2(0.5, -54)
+shape = SubResource("RectangleShape2D_fodb4")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Perder" to="." method="_on_perder_body_entered"]
