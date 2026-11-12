@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d1sx67c32vig1"]
+
+[ext_resource type="Script" uid="uid://cast4kcj1jysr" path="res://Proyectiles/fuego.gd" id="1_8u501"]
+[ext_resource type="Texture2D" uid="uid://cser6v26u4rbq" path="res://assets/animaciones-proyectil/FB001.png" id="2_iu7va"]
+[ext_resource type="AudioStream" uid="uid://bvi8e5ifpia7d" path="res://assets/Musica/fuego.mp3" id="3_iu7va"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 1.0
+
+[node name="Proyectil" type="Area2D" unique_id=576362821]
+scale = Vector2(29.255335, 27.808395)
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_8u501")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=86977378]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=389600833]
+position = Vector2(-8.4703295e-22, 0)
+scale = Vector2(0.06645952, 0.085551545)
+texture = ExtResource("2_iu7va")
+
+[node name="fuegoSFX" type="AudioStreamPlayer2D" parent="." unique_id=2071703035]
+scale = Vector2(1.6855476, 1.4528913)
+stream = ExtResource("3_iu7va")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

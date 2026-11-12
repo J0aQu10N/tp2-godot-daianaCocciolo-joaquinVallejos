@@ -191,7 +191,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_4eqd5"]
 resource_name = "saltar"
-length = 0.19999999999999998
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -250,6 +250,7 @@ stream_1/stream = ExtResource("8_dc2cb")
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1419484690]
 scale = Vector2(2.0454216, 1.8051893)
+collision_layer = 17
 script = ExtResource("1_fui21")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=84271851]
