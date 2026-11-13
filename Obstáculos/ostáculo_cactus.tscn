@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8jed81by04dj"]
 
-[ext_resource type="Script" uid="uid://dkhh0j2owju3l" path="res://Obstáculos/ostáculo_cactus.gd" id="1_m8ksq"]
+[ext_resource type="Script" uid="uid://b4krrjckv8mqi" path="res://Obstáculos/Obstaculos.gd" id="1_m8ksq"]
 [ext_resource type="Texture2D" uid="uid://c1o5ur5ljvrs4" path="res://entorno/Objects/Cactus (1).png" id="2_m8ksq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2p3n1"]

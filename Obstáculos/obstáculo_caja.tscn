@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b47367pdf3tog"]
 
 [ext_resource type="Texture2D" uid="uid://biiaf40eaj13w" path="res://entorno/Objects/Crate.png" id="1_o1em3"]
-[ext_resource type="Script" uid="uid://dub6f041oelh8" path="res://Obstáculos/caja.gd" id="2_5n4yb"]
+[ext_resource type="Script" uid="uid://b4krrjckv8mqi" path="res://Obstáculos/Obstaculos.gd" id="2_o1em3"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cqdji"]
 
@@ -22,7 +22,7 @@ position = Vector2(0, -42.5)
 shape = SubResource("RectangleShape2D_6ayia")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2081596863]
-script = ExtResource("2_5n4yb")
+script = ExtResource("2_o1em3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1818777366]
 position = Vector2(-0.5, 7.5)

@@ -1,9 +1,9 @@
-extends Area2D
+class_name Gema
+extends ClaseAbstracta
 
 @onready var scoreSFX=$scoreSFX
 
-func _on_body_entered(body: Node2D) -> void:
-	if body.name == 'CharacterBody2D':
+func _reaccionar_interaccion(_jugador: Node2D) -> void:
 		Gestionscore.sumar_puntos(10)
 		scoreSFX.play()
 		await scoreSFX.finished
