@@ -1,18 +1,16 @@
 extends Node
 
-var puntos_acumulados: int = 0;
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var _puntos_acumulados: int = 0;
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
+##Suma los puntos
 func sumar_puntos(puntos: int):
-	puntos_acumulados += puntos
+	_puntos_acumulados += puntos
 
+##Reinicia el puntaje
 func reiniciar_score():
-	puntos_acumulados = 0
-	
+	_puntos_acumulados = 0
+
+##Getter: Leer el puntaje
+func get_puntos() -> int:
+	return _puntos_acumulados

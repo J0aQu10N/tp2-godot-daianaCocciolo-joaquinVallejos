@@ -2,6 +2,6 @@ class_name Obstaculo
 extends ClaseAbstracta
 
 
-func _reaccionar_interaccion(_jugador: Node2D) -> void:
+func reaccionar_interaccion(_jugador: Jugador) -> void:
 	
-	get_tree().change_scene_to_file("res://world/pantalla_de_derrota.tscn")
+	get_tree().change_scene_to_file.call_deferred("res://world/pantalla_de_derrota.tscn")

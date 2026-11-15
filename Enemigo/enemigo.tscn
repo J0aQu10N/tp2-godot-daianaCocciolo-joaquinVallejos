@@ -46,7 +46,6 @@ stream = ExtResource("4_wsjwo")
 [node name="muerteSFX" type="AudioStreamPlayer2D" parent="." unique_id=1499300282]
 stream = ExtResource("4_wsjwo")
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Perder" to="." method="_on_perder_body_entered"]
 [connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

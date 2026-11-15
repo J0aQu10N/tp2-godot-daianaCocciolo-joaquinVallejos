@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dac5r4uty20l8"]
 
 [ext_resource type="Texture2D" uid="uid://cslodt1f3ijto" path="res://icon.svg" id="1_wv3cm"]
-[ext_resource type="Script" uid="uid://d3rahu6g613nw" path="res://entorno/piso.gd" id="2_4ny6w"]
+[ext_resource type="Script" uid="uid://b4krrjckv8mqi" path="res://Obstáculos/Obstaculos.gd" id="2_4ny6w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ny6w"]
 size = Vector2(128.09131, 130.25827)
@@ -28,5 +28,3 @@ script = ExtResource("2_4ny6w")
 position = Vector2(0.055172056, 1.5544746)
 scale = Vector2(6.253943, -3.9840364)
 shape = SubResource("RectangleShape2D_nex72")
-
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

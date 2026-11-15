@@ -1,5 +1,5 @@
-extends Area2D
+class_name CartelVictoria
+extends ClaseAbstracta
 
-func _on_body_entered(body: Node2D) -> void:
-	if body.name == 'CharacterBody2D':
-		get_tree().change_scene_to_file('res://world/pantalla_de_victoria.tscn')
+func reaccionar_interaccion(_jugador: Jugador) -> void:
+	get_tree().change_scene_to_file.call_deferred('res://world/pantalla_de_victoria.tscn')

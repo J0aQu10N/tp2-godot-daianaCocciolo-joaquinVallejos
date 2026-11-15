@@ -1488,7 +1488,7 @@ sources/15 = SubResource("TileSetAtlasSource_to4t3")
 script = ExtResource("1_skph3")
 
 [node name="CharacterBody2D" parent="." unique_id=1419484690 instance=ExtResource("1_qpnag")]
-position = Vector2(526.00006, 574)
+position = Vector2(559, 571)
 
 [node name="StaticBody2D" parent="." unique_id=711872060 instance=ExtResource("2_ifhbl")]
 visible = false

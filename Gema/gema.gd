@@ -1,11 +1,12 @@
 class_name Gema
 extends ClaseAbstracta
 
-@onready var scoreSFX=$scoreSFX
+@export var _valor_puntos: int = 10
+@onready var _score_sfx=$scoreSFX
 
-func _reaccionar_interaccion(_jugador: Node2D) -> void:
-		Gestionscore.sumar_puntos(10)
-		scoreSFX.play()
-		await scoreSFX.finished
+func reaccionar_interaccion(_jugador: Jugador) -> void:
+		Gestionscore.sumar_puntos(_valor_puntos)
+		_score_sfx.play()
+		await _score_sfx.finished
 		queue_free()
 	

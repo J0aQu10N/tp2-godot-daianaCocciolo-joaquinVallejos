@@ -9,9 +9,9 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	# Polimorfismo
-	if body.name == "CharacterBody2D":
-		_reaccionar_interaccion(body)
+	if body is Jugador:
+		reaccionar_interaccion(body)
 
 ## Método abstracto. 
-func _reaccionar_interaccion(_jugador: Node2D) -> void:
+func reaccionar_interaccion(_jugador: Jugador) -> void:
 	pass

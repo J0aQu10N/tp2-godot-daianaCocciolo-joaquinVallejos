@@ -24,5 +24,3 @@ shape = SubResource("RectangleShape2D_dklp6")
 [node name="scoreSFX" type="AudioStreamPlayer2D" parent="." unique_id=917083897]
 stream = ExtResource("3_mgh5b")
 pitch_scale = 1.5
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bcc82j1veydmi"]
 
-[ext_resource type="Script" uid="uid://dge5oh6wc80hc" path="res://Pantalla de derrota/pantalla_de_derrota.gd" id="1_4fhll"]
+[ext_resource type="Script" uid="uid://ij7i1eqfe2wo" path="res://ScriptPantallaFindelJuego/pantalla_de_victoria.gd" id="1_gsvhj"]
 [ext_resource type="AudioStream" uid="uid://c62ofycxa2n3v" path="res://assets/Musica/death.mp3" id="2_gsvhj"]
 [ext_resource type="AudioStream" uid="uid://cgog87xo2gccd" path="res://assets/Musica/total-fail.mp3" id="3_hnhir"]
 
@@ -18,7 +18,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1156.0
 offset_bottom = 656.0
-script = ExtResource("1_4fhll")
+script = ExtResource("1_gsvhj")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2118942654]
 layout_mode = 0
