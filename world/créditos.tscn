@@ -34,8 +34,7 @@ horizontal_alignment = 1
 modulate = Color(0.035382573, 0.044820555, 3.008172e-09, 1)
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
-text = "CIARES JOSE MANUEL
-COCCIOLO DAIANA GISELLE
+text = "COCCIOLO DAIANA GISELLE
 VALLEJOS JOAQUIN"
 horizontal_alignment = 1
 

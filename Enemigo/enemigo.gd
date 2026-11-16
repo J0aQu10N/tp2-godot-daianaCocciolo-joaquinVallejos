@@ -1,4 +1,5 @@
 extends CharacterBody2D
+
 @export var objetivo:Node2D
 @export var velocidad:float = 200
 @export var proyectil_escena: PackedScene
