@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cui3s5ai1u66w" path="res://Enemigo/enemigo.gd" id="1_k6k1e"]
 [ext_resource type="Texture2D" uid="uid://bhud03r0um433" path="res://assets/animaciones-enemigo/evilwizard.png" id="2_wsjwo"]
-[ext_resource type="Script" uid="uid://b4krrjckv8mqi" path="res://Obstáculos/Obstaculos.gd" id="3_wsjwo"]
+[ext_resource type="Script" uid="uid://b4krrjckv8mqi" path="res://Obstáculos/obstaculos.gd" id="3_wsjwo"]
 [ext_resource type="AudioStream" uid="uid://dia6v6u80ufvi" path="res://assets/Musica/sfx/godot-Roar-sfx.mp3" id="4_wsjwo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsjwo"]

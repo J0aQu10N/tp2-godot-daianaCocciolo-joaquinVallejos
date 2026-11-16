@@ -22,5 +22,5 @@ func _on_salir_pressed() -> void:
 
 
 func _on_créditos_pressed() -> void:
-	get_tree().change_scene_to_file("res://world/créditos.tscn")
+	get_tree().change_scene_to_file("res://world/creditos.tscn")
 	pass # Replace with function body.

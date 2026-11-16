@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://gmuom48ig6b3"]
 
-[ext_resource type="Script" uid="uid://ij7i1eqfe2wo" path="res://ScriptPantallaFindelJuego/pantalla_de_victoria.gd" id="1_ngh56"]
+[ext_resource type="Script" uid="uid://ij7i1eqfe2wo" path="res://ScriptPantallaFindelJuego/pantalla_fin_juego.gd" id="1_ngh56"]
 [ext_resource type="AudioStream" uid="uid://cgurggql7ob6x" path="res://assets/Musica/win.mp3" id="2_odh1g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_odh1g"]

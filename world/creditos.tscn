@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://k0ba4h4sd0eu"]
 
-[ext_resource type="Texture2D" uid="uid://cbcucqcjacpge" path="res://entorno/BG.png" id="1_fruri"]
-[ext_resource type="Script" uid="uid://4geipgb3p1q2" path="res://Menú Principal/créditos.gd" id="1_pkycg"]
+[ext_resource type="Script" uid="uid://4geipgb3p1q2" path="res://Menú Principal/creditos.gd" id="1_6rnlt"]
+[ext_resource type="Texture2D" uid="uid://cbcucqcjacpge" path="res://entorno/BG.png" id="2_pvmd7"]
 
 [node name="Créditos" type="Control" unique_id=894518319]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1220.0
 offset_bottom = 831.0
-script = ExtResource("1_pkycg")
+script = ExtResource("1_6rnlt")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1633696724]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.92827606, 0.8326494)
-texture = ExtResource("1_fruri")
+texture = ExtResource("2_pvmd7")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=313941823]
 layout_mode = 0
