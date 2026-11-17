@@ -2,30 +2,6 @@
 class_name Jugador
 extends CharacterBody2D
 
-## la base para el controlador
-class Controlador:
-	func obtener_direccion() -> float:
-		return 0.0
-	func quiere_saltar() -> bool:
-		return false
-
-## controlador base que usa los los binds de godot para el movimiento con flechitas
-class ControladorFlechas extends Controlador:
-	func obtener_direccion() -> float:
-		return Input.get_axis("ui_left", "ui_right")
-
-	func quiere_saltar() -> bool:
-		return Input.is_action_just_pressed("ui_accept")
-
-## versión custom para los que están acostumbrados al esquema de controles modernos de WASD
-## o no tengan las flechitas en el teclado (Como es mi caso)
-class ControladorWASD extends Controlador:
-	func obtener_direccion() -> float:
-		return Input.get_axis("wasd_izq", "wasd_der")
-	
-	func quiere_saltar() -> bool:
-		return Input.is_action_just_pressed("wasd_saltar")
-
 const VELOCIDAD = 400.0
 const SALTO = -600.0
 
@@ -70,6 +46,7 @@ func _physics_process(delta: float) -> void:
 	
 	_orientar_sprite(direction)
 	_animaciones(direction)
+
 
 func _orientar_sprite(direction: float) -> void:
 	if direction == 1:
